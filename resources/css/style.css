@@ -11,6 +11,10 @@ html{
     font-weight: 300;
     text-rendering: optimizeLegibility;
 }
-/* body{
-    font-family: 'Lato', sans-serif;
-} */
+
+.row{
+    /*set the maximum width for the row of the GRID in px */
+    max-width: 1140px;
+    /*center the row on the webpage*/
+    margin: 0 auto;
+}
