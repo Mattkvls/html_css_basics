@@ -3,7 +3,10 @@
     padding: 0;
     box-sizing: border-box;
 }
-
+html{
+    background-color: white;
+    color: #555;
+}
 /* body{
     font-family: 'Lato', sans-serif;
 } */
