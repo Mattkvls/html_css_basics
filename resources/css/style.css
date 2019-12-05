@@ -47,7 +47,7 @@ h1{
     text-decoration: none; /*remove the underline of links*/
     border-radius: 200px;
     color: #fff;
-    transition: all 0.2s;
+    transition: background-color 0.2s;
 
 }
 
@@ -135,3 +135,7 @@ header{
 .main-nav li a:active{
     border-bottom: 2px solid #e67e22;
 }
+
+/*----------------------------------------------------------------------------*/
+/*FEATURES */
+/*----------------------------------------------------------------------------*/
