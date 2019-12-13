@@ -192,6 +192,7 @@ header{
     height: 100vh;
     background-size: cover; 
     background-position: center;
+    background-attachment: fixed;
 }
 
 .hero-text-box{
@@ -376,3 +377,48 @@ header{
     margin-top: -5px; /*θα τραβηξει τα εικονιδια πανω */
 }
 
+/*----------------------------------------------------------------------------*/
+/*CUSTOMER TESTIMONIALS*/
+/*----------------------------------------------------------------------------*/
+.testimonials{
+    background-image:linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.8)) ,url(./img/back-customers.jpg);
+    background-size: cover; /*do it almost always to fill the background*/
+    /* background-repeat: no-repeat; */
+    /* background-position: bottom left; */
+    color: white;
+
+    /*cool trick with css for backgrounds η εικονα ειναι σαν να μενει ακινητη και εμεις σκρολαρουμε το κειμενο απο πανω */
+    background-attachment: fixed;
+}
+
+blockquote{
+    padding: 2%;
+    font-style: italic;
+    line-height: 145%;
+    position: relative;
+    margin-top: 40px;
+}
+
+
+/*εισαγω το εικονιδιο με pseudo class */
+blockquote:before{
+    content: "\201C"; /*iso characters. το content ειναι απαραιτητο ακομα και αν το εχουμε αδειο */
+    font-size: 500%;
+    display: block;
+    position: absolute; /*o πατερας πρεπει να εχει relative για να ορισουμε σε αυτο συγκεκριμενη θεση */
+    top: -5px;
+    left: -5px;
+}
+
+
+cite{
+    font-size: 90%;
+    margin-top: 25px;
+    display: block;
+}
+cite img{
+    height: 45px;
+    border-radius: 50%;/*makes every element round*/
+    margin-right: 10px;
+    vertical-align: middle; /*φερνει την εικονα στο μεσο του cite*/
+}
