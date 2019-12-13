@@ -15,6 +15,21 @@ html{
     text-rendering: optimizeLegibility;
 }
 
+/* is very used in web development */
+.clearfix {zoom: 1;}
+.clearfix::after{
+    content: '';
+    clear: both;
+    display: block;
+    visibility: hidden;
+}
+
+/* .clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+  } */
+    
 /*----------------------------------------------------------------------------*/
 /*REUSABLE COMPONENTS*/
 /*----------------------------------------------------------------------------*/
@@ -68,6 +83,36 @@ h2:after{ /*will appear after the h2. use the pseudo class to add a line as  an 
     margin: 0 auto;
     margin-top: 30px;
 }
+
+/*-----------------LINKS------------------------------------*/
+/*style the tweeter links to 4 cities*/
+/*o selector ειναι για ενα element μετα απο ενα αλλο element */
+/*4 states of the buttons 
+#hover
+#visited
+#active
+#link*/
+ion-icon+a:link,
+ion-icon+a:visited{
+    text-decoration: none;
+    color: #e67e22;
+    padding-bottom: 1px;
+    border-bottom: 1px solid #e67e22;
+    /*για να κανω transition δλδ animation την εξαφανιση του border */
+    transition: border-bottom 0.2s, color 0.2s;
+}
+
+ion-icon+a:hover,
+ion-icon+a:active{
+    text-decoration: none;
+    color: #555;
+    border-bottom: 1px solid transparent;
+}
+
+
+
+
+
 /*-----------------BUTTONS------------------------------------*/
 .btn:link,
 .btn:visited{
@@ -197,3 +242,137 @@ header{
 /*----------------------------------------------------------------------------*/
 /*FEATURES */
 /*----------------------------------------------------------------------------*/
+.section-features .long-copy{
+    margin-bottom: 30px;
+}
+
+
+
+/*----------------------------------------------------------------------------*/
+/*MEALS  */
+/*----------------------------------------------------------------------------*/
+.section-meals{
+    padding: 0;
+}
+
+
+.meals-showcase{
+    list-style-type: none;
+    width: 100%;
+
+}
+
+.meals-showcase li{
+    display: block;
+    float: left;
+    width: 25%; /*επειδη θελουμε να καταλαμβανει ολο το πλαατος της οθονης και ειναι 4 κνουμε 100/4*/
+}
+
+.meal-photo{
+    width: 100%;
+    margin: 0;
+    overflow: hidden; /* για να κρυψουμε το κομματι της εικονας που ειναι 115% μεγαλυτερο δλδ πιο μεγαλη και απο το parent cotnainer */
+
+    /*για να κανουμε σκουρα μια φωτο κανουμε το opacity της φωτο μικροτερο 0,7 πχ και βαζουμε background-color: black;*/
+    background-color: #000;
+}
+
+.meal-photo img{
+    opacity: 0.7;
+    height: auto;
+    width: 100%;
+    /*zoom out and brighter animation with css3 transform*/
+    transform: scale(1.15);
+    transition: transform 0.5s, opacity 0.5s;
+}
+
+.meal-photo img:hover{
+    transform: scale(1.05); /*go back to normal if we hovver το 1,05 ειναι για να μην βγαζει απο κατω μιαα λευκη γραμμη*/
+    opacity: 1;
+}
+
+/*----------------------------------------------------------------------------*/
+/*HOW IT WORKS*/
+/*----------------------------------------------------------------------------*/
+.section-steps{
+    background-color: #f4f4f4;
+}
+
+/*επιλεγουμε ανεξαρτητα το καθε ενα col με το παρακατω selector*/
+
+.steps-box:first-child{
+    margin-top: 30px;
+    text-align: right; /*works for all inline-block elements*/
+    padding-right: 3%;
+
+}
+
+.steps-box:last-child{
+    margin-top: 70px;
+    padding-left: 3%;
+}
+
+/*the image class */
+.app-screen{
+     width: 40%; 
+}
+
+.works-step{
+    margin-bottom: 50px;
+}
+
+.works-step:last-of-type{
+    margin-bottom: 80px;
+}
+.works-step div{
+    color: #cf6d17;
+    border: 2px solid orange;
+    display: inline-block;
+    border-radius: 50%; /*make it a circle height, width should be equal*/
+    height: 55px;
+    width: 55px;
+    text-align: center;
+    padding:5px;
+    float: left;
+    font-size: 150%;
+    margin-right: 25px;
+}
+
+/*style the image inside the button app class*/
+.btn-app img{
+    height: 50px; 
+    width: auto;
+    margin-right: 10px;
+}
+
+/*----------------------------------------------------------------------------*/
+/*CITIES WE ARE IN*/
+/*----------------------------------------------------------------------------*/
+
+.box img{
+    width: 100%;
+    height: auto;
+    margin-bottom: 15px;
+}
+
+.city-feature{
+    margin-bottom: 5px;
+}
+
+/*format the icons bigger and aligned with orange color */
+.icon-small{
+    display: inline-block;
+    width: 30px;
+    text-align: center;
+    color: #e67e22;
+    font-size: 120%;
+    margin-right: 10px;
+
+/*tirck to center the icons and the text δεν δουλεψε τωρα!  */
+/*secretes to align text and icons */
+    line-height: 120%;
+    vertical-align: middle;
+/*second attempt*/
+    margin-top: -5px; /*θα τραβηξει τα εικονιδια πανω */
+}
+
