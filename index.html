@@ -9,6 +9,8 @@
     <link rel="stylesheet" type="text/css" href="./resources/css/style.css">
     <link href="https://fonts.googleapis.com/css?family=Lato:100,300,300i,400&display=swap" rel="stylesheet">
     <link href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css" rel="stylesheet">
+    <script type="module" src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule="" src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons/ionicons.js"></script>
                 
     <title>Omnifood</title>
 </head>
@@ -333,12 +335,77 @@
                 </div>
       </div>
   </section>
+
+  <section class="section-form">
+      <div class="row">
+          <h2>we're happy to hear from you</h2>
+      </div>
+      <div class="row">
+          <form action="#" method="POST" class="contact-form">
+              <div  class="row">
+                  <div class="col span-1-of-3">
+                        <label for="name">Name</label>
+                  </div>
+                    <div class="col span-2-of-3">
+                        <input type="text" id="name" name="name" placeholder="Your name please" required>
+                    </div>
+              </div>
+              <div class="row">
+                  <div class="col span-1-of-3">
+                    <label for="email">Email</label>
+                  </div>
+                  <div class="col span-2-of-3">
+                    <input type="email" id="email" name="email" placeholder="Your email please" required>
+                  </div>
+              </div>
+
+              <div class="row">
+                  <div class="col span-1-of-3">
+                    <label for="select">How did you find us?</label>
+                  </div>
+                  <div class="col span-2-of-3">
+                        <select name="findUs" id="findUs">
+                            <option value="friends">friends</option>
+                            <option value="Search" selected>Search engine</option>
+                            <option value="ad">ad</option>
+                            <option value="other">other</option>
+                        </select>
+                  </div>
+              </div>
+
+              <div class="row">
+                  <div class="col span-1-of-3">
+                        <label for="newsletter">Newsletter?</label>
+                  </div>
+                  <div class="col span-2-of-3">
+                        <input type="checkbox" name="news" id="news" checked>Yes, please
+                  </div>
+              </div>
+              <div class="row">
+                  <div class="col span-1-of-3">
+                        <label for="userText">Drop us a line</label>
+                  </div>
+                  <div class="col span-2-of-3">
+                        <textarea name="message" id="userText" cols="30" rows="10">Your message here</textarea>
+                  </div>
+              </div>
+              <div class="row">
+                  <div class="col span-1-of-3">
+                    <label for="submit">&nbsp;</label>
+                  </div>
+                  <div class="col span-2-of-3">
+                    <input type="submit" value="Send it!" id="submit">
+                  </div>
+              </div>
+          </form>
+      </div>
+  </section>
   
 
  
   
  
   
-  <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+  <!-- <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script> -->
 </body>
 </html>
