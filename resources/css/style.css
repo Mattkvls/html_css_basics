@@ -280,9 +280,10 @@ header{
 
    /*προσθετουμε shadow στο container που περιεχει την nav bar για να ξεχωριζει απο το υπολοιπο site */
    box-shadow: 0 2px 2px #efefefef;
+   z-index: 9999;
 }
 
-.main-nav{
+.sticky .main-nav{
     margin-top: 18px; /*αλλαζουμε το margin-top της ul στα αριστερα μικροτερο απο 55 σε 15 */
 }
 /*θα κανουμε και στα αλλα αλλαγες hover active */
