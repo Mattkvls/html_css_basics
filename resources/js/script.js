@@ -48,10 +48,32 @@ $('.js--scroll-to-plans').click(function(){
 })
 
 
+$('.js--scroll-to-start').click(function(){
+    $('html,body').animate(
+        {scrollTop:$('.js--section-features').offset().top},1000);
+})
 
 
+//----NAVIGATION SMOOTH SCROLLING---------
+// I searched for smooth scrolling snippet 
 
+$(function() {
+    $('a[href*=#]:not([href=#])').click(function() {
+      if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+        var target = $(this.hash);
+        target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+        if (target.length) {
+          $('html,body').animate({
+            scrollTop: target.offset().top
+          }, 10000);
+          return false;
+        }
+      }
+    });
+  });
 
+//define some anchors--> in the links where we have #
+//παμε και βαζουμε στα a (links ) μετα την διεση ενα id το ιδιο  id και στο section που θελουμε. 
 
-
+// the items fade in as we scroll
 });
