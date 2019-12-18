@@ -223,6 +223,15 @@ header{
     margin-top: 20px;
 }
 
+.logo-black{
+    display: none;/*παει και προσθετει το balck-logo στην html μετα βαζει να εχει το ιδιο στιλ απο πανω και το μονο που κανει διαφορετικα ειναι να ειχει αυτη την εξτρα property που το κανει να μην ειναι ορατο. */
+    height: 50px;
+    width: auto;
+    float: left;
+    margin-top: 5px 0;
+}
+
+
 .main-nav{
     float: right;
     list-style: none;
@@ -251,6 +260,53 @@ header{
 .main-nav li a:active{
     border-bottom: 2px solid #e67e22;
 }
+
+/*εδω βαζουμε την συνθηκη αν το logo ειναι μεσα στο sticky nav τοτε συμβαινει να ειναι μαυρο αν οχι τοτε ειναι ασπορο */
+
+.sticky .logo{
+    display: none;
+}
+
+.sticky .logo-black{display:block;}
+
+/*-----------------------STICKY PART--------------------*/
+/* sticky navigation */
+.sticky{
+   position: fixed; /*stays always at the same point irrespective of our scrolling */
+   top:0;
+   left:0; /*we say to be on the top left corner*/
+   width: 100%; /*the whole browser width*/
+   color: rgba(255, 255, 255, 0.98);
+
+   /*προσθετουμε shadow στο container που περιεχει την nav bar για να ξεχωριζει απο το υπολοιπο site */
+   box-shadow: 0 2px 2px #efefefef;
+}
+
+.main-nav{
+    margin-top: 18px; /*αλλαζουμε το margin-top της ul στα αριστερα μικροτερο απο 55 σε 15 */
+}
+/*θα κανουμε και στα αλλα αλλαγες hover active */
+
+.sticky .main-nav li a:link,
+.sticky .main-nav li a:visited{
+    padding: 16px 0;
+    color: #555;/*αλλαξαμε χρωμα */
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /*----------------------------------------------------------------------------*/
 /*FEATURES */
