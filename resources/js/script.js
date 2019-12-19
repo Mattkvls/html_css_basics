@@ -60,7 +60,7 @@ $('.js--scroll-to-start').click(function(){
 // I searched for smooth scrolling snippet 
 
 $(function() {
-    $('a[href*=#]:not([href=#])').click(function() {
+    $('a[href*=\\#]:not([href=\\#])').click(function() {
       if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
         var target = $(this.hash);
         target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
@@ -113,15 +113,39 @@ $('.js--wp-1').waypoint(function(direction){
 //μετα βαζουμε selector και waypoint ειναι method του waypoint
 //μετα απλα προσθετουμε την κλαση animated+ ονομα animation.css στο element που θελουμε
 
-//--------iphoe image animation --------------------
+//--------iphone image animation --------------------
 // 1)set the waypoint in the Html
 // 2)select the waypoint (with jquery) 
 // 3)inside the waypoint callback add to the selected element the class we want 
 // 4)set an offset if necessary 
 //5) set the opacity to 0 and 1 when the class animated is added at the same time .js--wp-2.animated{ opacity:1;}
 
+//iphone image animation 
 $('.js--wp-2').waypoint(function(direction){
   $('.js--wp-2').addClass('animated fadeInUp');
 },{
   offset:'50%'
 });
+
+
+//cities animation 
+$('.js--wp-3').waypoint(function(direction){
+  $('.js--wp-3').addClass('animated fadeIn');
+},{
+  offset:'50%'
+});
+
+
+//plans animation 
+$('.js--wp-4').waypoint(function(direction){
+  $('.js--wp-4').addClass('animated pulse');
+},{
+  offset:'50%'
+})
+//να κανω τα aimations για τα αλλα 2 και να τσεκαρω ταχυτητα και prefixes 
+
+//cities  number 3
+//plans number 4 pulse 
+//change the animation duration to 1s for 2,4 wp
+//prefix the animation duration for browser compatibility 
+//change the animation duration by adding the animation duration to our css code at the corresponding class of the aniamtion we want to change

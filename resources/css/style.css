@@ -677,20 +677,22 @@ footer p{
 /*----------------------------------------------------------------------------*/
 /*the element is hidden*/
     /* display: none not working here */
-.js--wp-1{
+.js--wp-1,
+.js--wp-2,
+.js--wp-3{
     opacity: 0;
 }
 
 /*οταν θα εχει και τις δυο classes παει παλι σε ορατο */
 /*κολλαει τις classes μεταξυ τους και αυτο σημαινει οτι θα πρεπει να υπαρχουν την ιδια στιγμη!!! ΠΡΟΣΟΧΗ*/
-.js--wp-1.animated{
+.js--wp-1.animated,
+.js--wp-2.animated,
+.js--wp-3.animated{
     opacity:1;
 }
-
-/*iphone animation */
-.js--wp-2{
-    opacity: 0;
-}
-.js--wp-2.animated{
-    opacity:1;
+/*iphone animation js--wp-2*/
+.js--wp-2,
+.js--wp-4{
+    -webkit-animation-duration: 1s;
+            animation-duration: 1s;
 }
