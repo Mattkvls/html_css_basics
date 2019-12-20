@@ -77,7 +77,7 @@ from 768-1023*/
     /* hide the nav bar we will make one later for the mobile devices */
         .main-nav{display: none;} 
 
-
+/* a .nav-icon{font-size: 80px;} */
     /*style the mobile navigation */
     .mobile-nav-icon{
         display: inline-block;
