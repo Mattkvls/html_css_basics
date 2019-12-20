@@ -149,3 +149,20 @@ $('.js--wp-4').waypoint(function(direction){
 //change the animation duration to 1s for 2,4 wp
 //prefix the animation duration for browser compatibility 
 //change the animation duration by adding the animation duration to our css code at the corresponding class of the aniamtion we want to change
+
+//-------------mobile navigation ------------------
+//δινουμε μια class στο a που ειναι το εικονιδιο του menu
+
+$('.js--nav-icon').click(function(event){
+    var nav=$('.js--main-nav'); //επειδη θα το γραψει πολλες φορες
+    var icon=$('.js--nav-icon ion-icon');
+    nav.slideToggle(200); //ειναι μεθοδος της jwuery που ανοιγει και κλεινει το κουμπι 
+  if(icon.attr('name')==='menu'){
+    console.log(icon.attr('name'));
+    icon.attr("name","close");
+    console.log(icon.attr('name'));
+  }else{
+    icon.attr('name','menu');
+  }
+ 
+});

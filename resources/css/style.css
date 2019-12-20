@@ -261,6 +261,23 @@ header{
     border-bottom: 2px solid #e67e22;
 }
 
+
+/*-----MOBILE NAV BAR ------------------------------*/
+/*πρωτα  φτιαξαμε αυτα και μετα παμε στο media queries και φτιαχνουμε το style της οταν θα την δειχνουμε*/
+.mobile-nav-icon{
+    float: right;
+    margin-top: 3px;
+
+    /* αν δεν βαλουμε το href σε a tags δεν εχουμε το χερακι που δειχνει οτι πατιεται  */
+    cursor: pointer; /*αυτο το κανει να ειναι */
+    display: none;/*δεν θελουμε να το βλεπουμε εξ αρχης*/
+}
+
+.mobile-nav-icon i{
+    font-size: 200%;
+    color:#fff;
+}
+
 /*εδω βαζουμε την συνθηκη αν το logo ειναι μεσα στο sticky nav τοτε συμβαινει να ειναι μαυρο αν οχι τοτε ειναι ασπορο */
 
 .sticky .logo{
@@ -296,6 +313,9 @@ header{
 }
 
 
+.mobile-nav-icon-close{
+    display: none;
+}
 
 
 
